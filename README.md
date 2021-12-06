@@ -5,7 +5,8 @@ This is the source code of our 3rd place solution to matching track of Image Sim
 ## Method Overview
 
 For the Matching Track task, we use a global and local dual retrieval method. The global recall model is EsViT, the same as task Descriptor Track. The local recall used SIFT point features. As shown in the figure, our pipeline is divided into four modules. When using an image for query, it is first put into the preprocessing module for overlay detection. Then the global and local features are extracted and retrieved in parallel. There are three recall branches: global recall, original local recall and cropped local recall. The last module will compute the matching score of three branches and merge them into the final result. 
-<img src="./method_overview.png" alt="method_overview" width="600"/>
+
+<img src="./method_overview.png" alt="method_overview" width="800"/>
 
 ## Installation
 
