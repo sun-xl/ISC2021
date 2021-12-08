@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="intel.config.composerxe.a.debug.1778972426">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="intel.config.composerxe.a.debug.1778972426" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/fast_sift_static"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/fast_sift_static/Debug"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="fast_sift_static" srcPrefixMapping="" srcRootPath=""/>
+					</externalSetting>
+				</externalSettings>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ICCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" id="intel.config.composerxe.a.debug.1778972426" name="Debug" parent="intel.config.composerxe.a.debug">
+					<folderInfo id="intel.config.composerxe.a.debug.1778972426." name="/" resourcePath="">
+						<toolChain id="intel.toolchain.composerxe.a.debug.1066681782" name="Intel(R) C++ Compiler XE" superClass="intel.toolchain.composerxe.a.debug">
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="intel.platform.composerxe.base.199084956" isAbstract="false" name="intel.platform.base" superClass="intel.platform.composerxe.base"/>
+							<builder buildPath="${workspace_loc:/fast_sift_static}/Debug" id="intel.builder.composerxe.makebuilder.830913775" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="intel.builder.composerxe.makebuilder"/>
+							<tool id="intel.tool.archiver.composerxe.base.474676466" name="Intel Archiver" superClass="intel.tool.archiver.composerxe.base"/>
+							<tool id="intel.tool.cpp.compiler.composerxe.base.2454284" name="Intel C++ Compiler" superClass="intel.tool.cpp.compiler.composerxe.base">
+								<option defaultValue="true" id="intel.compilestep.general.debug.1897193524" name="Include Debug Information (-g)" superClass="intel.compilestep.general.debug" valueType="boolean"/>
+								<option defaultValue="general.opt.none" id="intel.compilestep.general.optimization2.408043068" name="Optimization Level" superClass="intel.compilestep.general.optimization2" valueType="enumerated"/>
+							</tool>
+							<tool id="intel.tool.c.compiler.composerxe.base.1276454524" name="Intel C Compiler" superClass="intel.tool.c.compiler.composerxe.base">
+								<option defaultValue="true" id="intel.compilestep.general.debug.1094624423" name="Include Debug Information (-g)" superClass="intel.compilestep.general.debug" valueType="boolean"/>
+								<option defaultValue="general.opt.none" id="intel.compilestep.general.optimization2.1256261485" name="Optimization Level" superClass="intel.compilestep.general.optimization2" valueType="enumerated"/>
+								<inputType id="intel.c.compilestep.input.1902819271" name="C Sources" superClass="intel.c.compilestep.input"/>
+							</tool>
+							<tool id="intel.tool.cpp.linker.composerxe.base.883887753" name="Intel C++ Linker" superClass="intel.tool.cpp.linker.composerxe.base"/>
+							<tool id="intel.tool.c.linker.composerxe.base.834810677" name="Intel C Linker" superClass="intel.tool.c.linker.composerxe.base"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="intel.config.composerxe.a.release.229502303">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="intel.config.composerxe.a.release.229502303" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/fast_sift_static"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/fast_sift_static/Release"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="fast_sift_static" srcPrefixMapping="" srcRootPath=""/>
+					</externalSetting>
+				</externalSettings>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ICCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" description="" id="intel.config.composerxe.a.release.229502303" name="Release" parent="intel.config.composerxe.a.release">
+					<folderInfo id="intel.config.composerxe.a.release.229502303." name="/" resourcePath="">
+						<toolChain id="intel.toolchain.composerxe.a.release.562741273" name="Intel(R) C++ Compiler XE" superClass="intel.toolchain.composerxe.a.release">
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="intel.platform.composerxe.base.793222707" isAbstract="false" name="intel.platform.base" superClass="intel.platform.composerxe.base"/>
+							<builder buildPath="${workspace_loc:/fast_sift_static}/Release" id="intel.builder.composerxe.makebuilder.1372448291" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="intel.builder.composerxe.makebuilder"/>
+							<tool id="intel.tool.archiver.composerxe.base.1797676948" name="Intel Archiver" superClass="intel.tool.archiver.composerxe.base"/>
+							<tool id="intel.tool.cpp.compiler.composerxe.base.2057426285" name="Intel C++ Compiler" superClass="intel.tool.cpp.compiler.composerxe.base">
+								<option defaultValue="false" id="intel.compilestep.general.debug.105689579" name="Include Debug Information (-g)" superClass="intel.compilestep.general.debug" valueType="boolean"/>
+								<option defaultValue="general.opt.speed" id="intel.compilestep.general.optimization2.1797357947" name="Optimization Level" superClass="intel.compilestep.general.optimization2" valueType="enumerated"/>
+							</tool>
+							<tool id="intel.tool.c.compiler.composerxe.base.1917397897" name="Intel C Compiler" superClass="intel.tool.c.compiler.composerxe.base">
+								<option defaultValue="false" id="intel.compilestep.general.debug.384771102" name="Include Debug Information (-g)" superClass="intel.compilestep.general.debug" value="true" valueType="boolean"/>
+								<option defaultValue="general.opt.speed" id="intel.compilestep.general.optimization2.18452035" name="Optimization Level" superClass="intel.compilestep.general.optimization2" value="general.opt.speedHLO" valueType="enumerated"/>
+								<option id="intel.compilestep.data.OpenMP.230884497" name="Process OpenMP Directives" superClass="intel.compilestep.data.OpenMP" value="openmp.1" valueType="enumerated"/>
+								<option id="intel.compilestep.optimization.ipo.1361216489" name="Enable Whole Program Optimization (-ipo)" superClass="intel.compilestep.optimization.ipo" value="false" valueType="boolean"/>
+								<option id="intel.compilestep.optimization.ip.1958943376" name="Enable Interprocedural Optimization for Single File Compilation (-ip)" superClass="intel.compilestep.optimization.ip" value="false" valueType="boolean"/>
+								<option id="intel.compilestep.optimization.parallel.19656408" name="Parallelization (-parallel)" superClass="intel.compilestep.optimization.parallel" value="false" valueType="boolean"/>
+								<option id="intel.compilestep.cg.fpic.744171377" name="Generate Position Independent Code (-fpic)" superClass="intel.compilestep.cg.fpic" value="true" valueType="boolean"/>
+								<option id="intel.compilestep.optimization.inline.expand1.112818777" name="Inline Function Expansion" superClass="intel.compilestep.optimization.inline.expand1" value="inl.exp1.inlinedir" valueType="enumerated"/>
+								<option id="intel.compilestep.language.multibyte.639977229" name="Support Multibyte Characters in Source (-multibyte-chars)" superClass="intel.compilestep.language.multibyte" value="false" valueType="boolean"/>
+								<option id="intel.compilestep.data.alias_args.1699182368" name="Enable Argument Aliasing (-fargument-alias)" superClass="intel.compilestep.data.alias_args" value="false" valueType="boolean"/>
+								<option id="intel.compilestep.coptions.1852476961" name="Additional Options" superClass="intel.compilestep.coptions" value="" valueType="string"/>
+								<option id="intel.compilestep.cg.reqintelextensions.193757826" name="Intel(R) Processor-Specific Optimization" superClass="intel.compilestep.cg.reqintelextensions" value="intel.cg.reqavx" valueType="enumerated"/>
+								<option id="intel.compilestep.cg.useintelextensions.1259104405" name="Add Processor-Optimized Code Path" superClass="intel.compilestep.cg.useintelextensions" value="intel.cg.avx" valueType="enumerated"/>
+								<option id="intel.compilestep.cg.mgpu.arch.1356917191" name="Intel(R) Graphics Technology Microarchitecture " superClass="intel.compilestep.cg.mgpu.arch" value="intel.cg.mgpu.arch.ivybridge" valueType="enumerated"/>
+								<option id="intel.compilestep.lang.nointel.665741742" name="Disable all Intel language extensions" superClass="intel.compilestep.lang.nointel" value="false" valueType="boolean"/>
+								<inputType id="intel.c.compilestep.input.1283171080" name="C Sources" superClass="intel.c.compilestep.input"/>
+							</tool>
+							<tool id="intel.tool.cpp.linker.composerxe.base.1007689297" name="Intel C++ Linker" superClass="intel.tool.cpp.linker.composerxe.base"/>
+							<tool id="intel.tool.c.linker.composerxe.base.1669479742" name="Intel C Linker" superClass="intel.tool.c.linker.composerxe.base"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="fast_sift_static.intel.target.composerxe.a.2060602829" name="Static Library" projectType="intel.target.composerxe.a"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/fast_sift_static"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/fast_sift_static"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+</cproject>

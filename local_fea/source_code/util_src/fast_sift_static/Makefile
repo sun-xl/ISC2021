@@ -1,0 +1,103 @@
+#CC=icc
+#CXX=icpc
+#AR=ar
+CC=gcc
+CXX=g++
+AR=ar
+CP=cp
+
+all : libfast_sift_static.a
+
+libfast_sift_static.a : sift_descriptor_calculation.o sift_descriptor_calculation_avx.o sift_descriptor_calculation_sse4_1.o sift_feature_extraction.o sift_feature_match_sse2.o sift_gradient_calculation.o sift_gradient_calculation_avx.o sift_gradient_calculation_sse2.o sift_keypoint_detection.o sift_keypoint_detection_avx.o sift_keypoint_detection_sse2.o sift_math.o sift_orientation_assignment.o sift_prefilter_sse4_1.o sift_scale_space_calculation.o sift_scale_space_calculation_avx.o sift_scale_space_calculation_sse.o sift_util.o
+	@$(AR) -r  "libfast_sift_static.a" sift_descriptor_calculation.o sift_descriptor_calculation_avx.o sift_descriptor_calculation_sse4_1.o sift_feature_extraction.o sift_feature_match_sse2.o sift_gradient_calculation.o sift_gradient_calculation_avx.o sift_gradient_calculation_sse2.o sift_keypoint_detection.o sift_keypoint_detection_avx.o sift_keypoint_detection_sse2.o sift_math.o sift_orientation_assignment.o sift_prefilter_sse4_1.o sift_scale_space_calculation.o sift_scale_space_calculation_avx.o sift_scale_space_calculation_sse.o sift_util.o
+#	@$(CP) libfast_sift_static.a ../../extLib_cpu/
+#	@$(CP) libfast_sift_static.a ../../extLib_gpu/
+
+sift_descriptor_calculation.o : sift_descriptor_calculation.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_descriptor_calculation.d" -MT"sift_descriptor_calculation.d" -c -o "sift_descriptor_calculation.o" "sift_descriptor_calculation.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_descriptor_calculation.d" -MT"sift_descriptor_calculation.d" -c -o "sift_descriptor_calculation.o" "sift_descriptor_calculation.c"
+	
+
+sift_descriptor_calculation_avx.o : sift_descriptor_calculation_avx.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axAVX -xAVX -mgpu-arch=ivybridge -MMD -MP -MF"sift_descriptor_calculation_avx.d" -MT"sift_descriptor_calculation_avx.d" -c -o "sift_descriptor_calculation_avx.o" "sift_descriptor_calculation_avx.c"
+	@$(CC) -Wall -O3 -fpic -mavx -MMD -MP -MF"sift_descriptor_calculation_avx.d" -MT"sift_descriptor_calculation_avx.d" -c -o "sift_descriptor_calculation_avx.o" "sift_descriptor_calculation_avx.c"
+
+sift_descriptor_calculation_sse4_1.o : sift_descriptor_calculation_sse4_1.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_descriptor_calculation_sse4_1.d" -MT"sift_descriptor_calculation_sse4_1.d" -c -o "sift_descriptor_calculation_sse4_1.o" "sift_descriptor_calculation_sse4_1.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_descriptor_calculation_sse4_1.d" -MT"sift_descriptor_calculation_sse4_1.d" -c -o "sift_descriptor_calculation_sse4_1.o" "sift_descriptor_calculation_sse4_1.c"
+
+sift_feature_extraction.o : sift_feature_extraction.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_feature_extraction.d" -MT"sift_feature_extraction.d" -c -o "sift_feature_extraction.o" "sift_feature_extraction.c"
+	@$(CC) -Wall -O3 -std=c++11 -fpic -msse4.2 -MMD -MP -MF"sift_feature_extraction.d" -MT"sift_feature_extraction.d" -c -o "sift_feature_extraction.o" "sift_feature_extraction.c"
+
+sift_feature_match_sse2.o : sift_feature_match_sse2.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_feature_match_sse2.d" -MT"sift_feature_match_sse2.d" -c -o "sift_feature_match_sse2.o" "sift_feature_match_sse2.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_feature_match_sse2.d" -MT"sift_feature_match_sse2.d" -c -o "sift_feature_match_sse2.o" "sift_feature_match_sse2.c"
+
+sift_gradient_calculation.o : sift_gradient_calculation.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_gradient_calculation.d" -MT"sift_gradient_calculation.d" -c -o "sift_gradient_calculation.o" "sift_gradient_calculation.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_gradient_calculation.d" -MT"sift_gradient_calculation.d" -c -o "sift_gradient_calculation.o" "sift_gradient_calculation.c"
+
+sift_gradient_calculation_avx.o : sift_gradient_calculation_avx.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axAVX -xAVX -mgpu-arch=ivybridge -MMD -MP -MF"sift_gradient_calculation_avx.d" -MT"sift_gradient_calculation_avx.d" -c -o "sift_gradient_calculation_avx.o" "sift_gradient_calculation_avx.c"
+	@$(CC) -Wall -O3 -fpic -mavx -MMD -MP -MF"sift_gradient_calculation_avx.d" -MT"sift_gradient_calculation_avx.d" -c -o "sift_gradient_calculation_avx.o" "sift_gradient_calculation_avx.c"
+
+sift_gradient_calculation_sse2.o : sift_gradient_calculation_sse2.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_gradient_calculation_sse2.d" -MT"sift_gradient_calculation_sse2.d" -c -o "sift_gradient_calculation_sse2.o" "sift_gradient_calculation_sse2.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_gradient_calculation_sse2.d" -MT"sift_gradient_calculation_sse2.d" -c -o "sift_gradient_calculation_sse2.o" "sift_gradient_calculation_sse2.c"
+
+sift_keypoint_detection.o : sift_keypoint_detection.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_keypoint_detection.d" -MT"sift_keypoint_detection.d" -c -o "sift_keypoint_detection.o" "sift_keypoint_detection.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_keypoint_detection.d" -MT"sift_keypoint_detection.d" -c -o "sift_keypoint_detection.o" "sift_keypoint_detection.c"
+
+sift_keypoint_detection_avx.o : sift_keypoint_detection_avx.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axAVX -xAVX -mgpu-arch=ivybridge -MMD -MP -MF"sift_keypoint_detection_avx.d" -MT"sift_keypoint_detection_avx.d" -c -o "sift_keypoint_detection_avx.o" "sift_keypoint_detection_avx.c"
+	@$(CC) -Wall -O3 -fpic -mavx -MMD -MP -MF"sift_keypoint_detection_avx.d" -MT"sift_keypoint_detection_avx.d" -c -o "sift_keypoint_detection_avx.o" "sift_keypoint_detection_avx.c"
+
+sift_keypoint_detection_sse2.o : sift_keypoint_detection_sse2.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_keypoint_detection_sse2.d" -MT"sift_keypoint_detection_sse2.d" -c -o "sift_keypoint_detection_sse2.o" "sift_keypoint_detection_sse2.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_keypoint_detection_sse2.d" -MT"sift_keypoint_detection_sse2.d" -c -o "sift_keypoint_detection_sse2.o" "sift_keypoint_detection_sse2.c"
+
+sift_math.o : sift_math.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_math.d" -MT"sift_math.d" -c -o "sift_math.o" "sift_math.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_math.d" -MT"sift_math.d" -c -o "sift_math.o" "sift_math.c"
+
+sift_orientation_assignment.o : sift_orientation_assignment.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_orientation_assignment.d" -MT"sift_orientation_assignment.d" -c -o "sift_orientation_assignment.o" "sift_orientation_assignment.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_orientation_assignment.d" -MT"sift_orientation_assignment.d" -c -o "sift_orientation_assignment.o" "sift_orientation_assignment.c"
+
+sift_prefilter_sse4_1.o : sift_prefilter_sse4_1.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_prefilter_sse4_1.d" -MT"sift_prefilter_sse4_1.d" -c -o "sift_prefilter_sse4_1.o" "sift_prefilter_sse4_1.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_prefilter_sse4_1.d" -MT"sift_prefilter_sse4_1.d" -c -o "sift_prefilter_sse4_1.o" "sift_prefilter_sse4_1.c"
+
+sift_scale_space_calculation.o : sift_scale_space_calculation.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_scale_space_calculation.d" -MT"sift_scale_space_calculation.d" -c -o "sift_scale_space_calculation.o" "sift_scale_space_calculation.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_scale_space_calculation.d" -MT"sift_scale_space_calculation.d" -c -o "sift_scale_space_calculation.o" "sift_scale_space_calculation.c"
+
+sift_scale_space_calculation_avx.o : sift_scale_space_calculation_avx.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axAVX -xAVX -mgpu-arch=ivybridge -MMD -MP -MF"sift_scale_space_calculation_avx.d" -MT"sift_scale_space_calculation_avx.d" -c -o "sift_scale_space_calculation_avx.o" "sift_scale_space_calculation_avx.c"
+	@$(CC) -Wall -O3 -fpic -mavx -MMD -MP -MF"sift_scale_space_calculation_avx.d" -MT"sift_scale_space_calculation_avx.d" -c -o "sift_scale_space_calculation_avx.o" "sift_scale_space_calculation_avx.c"
+
+sift_scale_space_calculation_sse.o : sift_scale_space_calculation_sse.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_scale_space_calculation_sse.d" -MT"sift_scale_space_calculation_sse.d" -c -o "sift_scale_space_calculation_sse.o" "sift_scale_space_calculation_sse.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_scale_space_calculation_sse.d" -MT"sift_scale_space_calculation_sse.d" -c -o "sift_scale_space_calculation_sse.o" "sift_scale_space_calculation_sse.c"
+
+sift_util.o : sift_util.c
+	#$(CC) -g -O3 -no-multibyte-chars -fargument-noalias -fpic -axSSE4.2 -xSSE4.2 -mgpu-arch=ivybridge -MMD -MP -MF"sift_util.d" -MT"sift_util.d" -c -o "sift_util.o" "sift_util.c"
+	@$(CC) -Wall -O3 -fpic -msse4.2 -MMD -MP -MF"sift_util.d" -MT"sift_util.d" -c -o "sift_util.o" "sift_util.c"
+
+
+
+clean :
+ifneq ($(wildcard *.o),)
+	rm *.o
+endif
+ifneq ($(wildcard *.d),)
+	rm *.d
+endif
+ifneq ($(wildcard *.a),)
+	rm *.a
+endif
+
+
+
