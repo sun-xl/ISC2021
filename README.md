@@ -107,8 +107,8 @@ The h5 file will be saved in `./h5_descriptors/fb_descriptors.h5`
 #### step7: retrieval use image's global feature
 We have already added our h5 file in phase 1. Use faiss to get top1 pairs.
 ```
-cd global_fea/feature_extract
-python faiss_topk.py ./h5_descriptors/fb_descriptors.h5 ./global_pair_result.txt
+cd global_fea/faiss_search
+python faiss_topk.py ../feature_extract/h5_descriptors/fb_descriptors.h5 ./global_pair_result.txt
 ```
 
 #### step8: compute match score and final result
